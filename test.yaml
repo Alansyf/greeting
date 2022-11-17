@@ -1,0 +1,25 @@
+kong_ingress:
+- name: ism-api
+  namespace: ism
+  host: ism-api.api.datalake-workspace.c.eu-de-2.cloud.sap
+  username: MCC_ISM_user
+  vault_path: workspace
+  service:
+    name: ism-api-svc
+    port:
+      number: '80'
+  users:
+    - MCC_ISM_user
+
+
+- name: ism-ariba
+  namespace: ism
+  host: ism-ariba.api.datalake-workspace.c.eu-de-2.cloud.sap
+  username: ism_ariba_user
+  vault_path: workspace
+  service:
+    name: ism-ariba-svc
+    port:
+      number: '80'
+  users:
+    - ism_ariba_user
